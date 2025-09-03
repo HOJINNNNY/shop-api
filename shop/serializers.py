@@ -1,4 +1,4 @@
-from drf_writable_nested.serializers import WritableNestedModelSerializer
+from drf_writable_nested import WritableNestedModelSerializer, UniqueFieldsMixin
 from rest_framework import serializers
 
 from .models import Product, ProductOption, Tag
@@ -11,7 +11,7 @@ class ProductOptionSerializer(serializers.ModelSerializer):
         fields = ('pk', 'name', 'price')
 
 
-class TagSerializer(serializers.ModelSerializer):
+class TagSerializer(UniqueFieldsMixin, serializers.ModelSerializer):
 
     class Meta:
         model = Tag
