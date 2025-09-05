@@ -49,3 +49,15 @@ docker-compose up --build
 - http://localhost:8000/admin/
 #### 3. API 문서
 - http://localhost:8000/doc/
+
+---
+### pytest 실행 방법
+#### 1. 의존성 설치
+```
+pip install -r requirements.txt
+```
+#### 2. 테스트 실행
+```
+pytest
+```
+
