@@ -1,5 +1,3 @@
-from http.client import responses
-
 import pytest
 from rest_framework.test import APIClient
 
@@ -41,7 +39,7 @@ def test_create(api_client):
         {
             "name": "TestProduct",
             "option_set": [
-                {"name": "TestOption1", "price": 1000 },
+                {"name": "TestOption1", "price": 1000},
                 {"name": "TestOption2", "price": 500},
                 {"name": "TestOption3", "price": 0}
             ],
@@ -50,7 +48,7 @@ def test_create(api_client):
                 {"name": "NewTag"}
             ]
         },
-        format = "json"
+        format="json"
     )
 
     assert response.status_code == 201
